@@ -1,0 +1,2 @@
+[11-Jul-2019 13:35:23 UTC] PHP Warning:  require_once(include/auth.php): failed to open stream: No such file or directory in /home/indiacre/public_html/creation/labour/index.php on line 2
+[11-Jul-2019 13:35:23 UTC] PHP Fatal error:  require_once(): Failed opening required 'include/auth.php' (include_path='.:/opt/alt/php72/usr/share/pear') in /home/indiacre/public_html/creation/labour/index.php on line 2

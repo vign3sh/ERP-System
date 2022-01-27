@@ -1,0 +1,1 @@
+[10-Jul-2019 11:32:25 UTC] PHP Warning:  session_start(): Cannot send session cache limiter - headers already sent (output started at /home/indiacre/public_html/creation/display/display.php:3) in /home/indiacre/public_html/creation/display/display.php on line 5
