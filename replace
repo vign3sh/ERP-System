@@ -1,0 +1,76 @@
+RewriteEngine on
+
+RewriteCond %{HTTP_REFERER} !^http://available.indiacreation.com/.*$      [NC]
+RewriteCond %{HTTP_REFERER} !^http://available.indiacreation.com$      [NC]
+RewriteCond %{HTTP_REFERER} !^http://feedback.indiacreation.com/.*$      [NC]
+RewriteCond %{HTTP_REFERER} !^http://feedback.indiacreation.com$      [NC]
+RewriteCond %{HTTP_REFERER} !^http://gallery.indiacreation.com/.*$      [NC]
+RewriteCond %{HTTP_REFERER} !^http://gallery.indiacreation.com$      [NC]
+RewriteCond %{HTTP_REFERER} !^http://indiacreation.com/.*$      [NC]
+RewriteCond %{HTTP_REFERER} !^http://indiacreation.com$      [NC]
+RewriteCond %{HTTP_REFERER} !^http://www.available.indiacreation.com/.*$      [NC]
+RewriteCond %{HTTP_REFERER} !^http://www.available.indiacreation.com$      [NC]
+RewriteCond %{HTTP_REFERER} !^http://www.feedback.indiacreation.com/.*$      [NC]
+RewriteCond %{HTTP_REFERER} !^http://www.feedback.indiacreation.com$      [NC]
+RewriteCond %{HTTP_REFERER} !^http://www.gallery.indiacreation.com/.*$      [NC]
+RewriteCond %{HTTP_REFERER} !^http://www.gallery.indiacreation.com$      [NC]
+RewriteCond %{HTTP_REFERER} !^http://www.indiacreation.com/.*$      [NC]
+RewriteCond %{HTTP_REFERER} !^http://www.indiacreation.com$      [NC]
+RewriteCond %{HTTP_REFERER} !^https://available.indiacreation.com/.*$      [NC]
+RewriteCond %{HTTP_REFERER} !^https://available.indiacreation.com$      [NC]
+RewriteCond %{HTTP_REFERER} !^https://erp.indiacreation.com/.*$      [NC]
+RewriteCond %{HTTP_REFERER} !^https://erp.indiacreation.com$      [NC]
+RewriteCond %{HTTP_REFERER} !^https://feedback.indiacreation.com/.*$      [NC]
+RewriteCond %{HTTP_REFERER} !^https://feedback.indiacreation.com$      [NC]
+RewriteCond %{HTTP_REFERER} !^https://gallery.indiacreation.com/.*$      [NC]
+RewriteCond %{HTTP_REFERER} !^https://gallery.indiacreation.com$      [NC]
+RewriteCond %{HTTP_REFERER} !^https://indiacreation.com/.*$      [NC]
+RewriteCond %{HTTP_REFERER} !^https://indiacreation.com$      [NC]
+RewriteCond %{HTTP_REFERER} !^https://www.available.indiacreation.com/.*$      [NC]
+RewriteCond %{HTTP_REFERER} !^https://www.available.indiacreation.com$      [NC]
+RewriteCond %{HTTP_REFERER} !^https://www.erp.indiacreation.com/.*$      [NC]
+RewriteCond %{HTTP_REFERER} !^https://www.erp.indiacreation.com$      [NC]
+RewriteCond %{HTTP_REFERER} !^https://www.feedback.indiacreation.com/.*$      [NC]
+RewriteCond %{HTTP_REFERER} !^https://www.feedback.indiacreation.com$      [NC]
+RewriteCond %{HTTP_REFERER} !^https://www.gallery.indiacreation.com/.*$      [NC]
+RewriteCond %{HTTP_REFERER} !^https://www.gallery.indiacreation.com$      [NC]
+RewriteCond %{HTTP_REFERER} !^https://www.indiacreation.com/.*$      [NC]
+RewriteCond %{HTTP_REFERER} !^https://www.indiacreation.com$      [NC]
+RewriteRule .*\.(jpg|jpeg|gif|png|bmp)$ - [F,NC]
+RewriteCond %{HTTPS} off
+RewriteCond %{HTTP:X-Forwarded-SSL} !on
+RewriteCond %{HTTP_HOST} ^erp\.indiacreation\.com$ [OR]
+RewriteCond %{HTTP_HOST} ^www\.erp\.indiacreation\.com$
+RewriteRule ^(.*)$ "https\:\/\/erp\.indiacreation\.com\/$1" [R=301,L]
+
+# BEGIN cPanel-generated php ini directives, do not edit
+# Manual editing of this file may result in unexpected behavior.
+# To make changes to this file, use the cPanel MultiPHP INI Editor (Home >> Software >> MultiPHP INI Editor)
+# For more information, read our documentation (https://go.cpanel.net/EA4ModifyINI)
+<IfModule php5_module>
+   php_flag asp_tags Off
+   php_flag display_errors Off
+   php_value max_execution_time 30
+   php_value max_input_time 60
+   php_value max_input_vars 1000
+   php_value memory_limit 4000M
+   php_value post_max_size 20M
+   php_value session.gc_maxlifetime 1440
+   php_value session.save_path "/var/cpanel/php/sessions/ea-php56"
+   php_value upload_max_filesize 20M
+   php_flag zlib.output_compression Off
+</IfModule>
+<IfModule lsapi_module>
+   php_flag asp_tags Off
+   php_flag display_errors Off
+   php_value max_execution_time 30
+   php_value max_input_time 60
+   php_value max_input_vars 1000
+   php_value memory_limit 4000M
+   php_value post_max_size 20M
+   php_value session.gc_maxlifetime 1440
+   php_value session.save_path "/var/cpanel/php/sessions/ea-php56"
+   php_value upload_max_filesize 20M
+   php_flag zlib.output_compression Off
+</IfModule>
+# END cPanel-generated php ini directives, do not edit
